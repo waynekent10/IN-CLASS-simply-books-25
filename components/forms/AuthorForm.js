@@ -111,7 +111,6 @@ AuthorForm.propTypes = {
     email: PropTypes.string,
     favorite: PropTypes.bool,
     firebaseKey: PropTypes.string,
-    uid: '',
   }),
 };
 
