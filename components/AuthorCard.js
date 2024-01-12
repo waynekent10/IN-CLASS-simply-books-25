@@ -15,11 +15,11 @@ function AuthorCard({ authorObj, onUpdate }) {
       <Card.Body>
         <Card.Title>{authorObj.first_name} {authorObj.last_name}</Card.Title>
         <p className="card-text bold">{authorObj.favorite && <span>Favorite<br /></span> }</p>
-        {/* DYNAMIC LINK TO VIEW THE BOOK DETAILS  */}
+        {/* DYNAMIC LINK TO VIEW THE Author  */}
         <Link href={`/author/${authorObj.firebaseKey}`} passHref>
           <Button variant="primary" className="m-2">VIEW</Button>
         </Link>
-        {/* DYNAMIC LINK TO EDIT THE BOOK DETAILS  */}
+        {/* DYNAMIC LINK TO EDIT THE Author   */}
         <Link href={`/author/edit/${authorObj.firebaseKey}`} passHref>
           <Button variant="info">EDIT</Button>
         </Link>
