@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import PropTypes from 'prop-types';
 import FloatingLabel from 'react-bootstrap/FloatingLabel';
 import Form from 'react-bootstrap/Form';
-import { Button } from 'react-bootstrap';
+import { Button, FormSelect } from 'react-bootstrap';
 import { useAuth } from '../../utils/context/authContext';
 import { getAuthors } from '../../api/authorData';
 import { createBook, updateBook } from '../../api/bookData';
@@ -98,7 +98,7 @@ function BookForm({ obj }) {
           name="author_id"
           onChange={handleChange}
           className="mb-3"
-          value={obj.author_id} // FIXME: modify code to remove error
+          value={FormSelect.author_id} // FIXME: modify code to remove error
           required
         >
           <option value="">Select an Author</option>
