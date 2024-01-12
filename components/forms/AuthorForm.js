@@ -14,15 +14,12 @@ const initialState = {
 
 function AuthorForm({ obj }) {
   const [formInput, setFormInput] = useState(initialState);
-  const [getAuthors, setAuthors] = useState([]);
   const router = useRouter();
   const { user } = useAuth();
 
   useEffect(() => {
-    getAuthors(user.uid).then(setAuthors);
-
     if (obj.firebaseKey) setFormInput(obj);
-  }, [getAuthors, obj, user]);
+  }, [obj]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -85,19 +82,6 @@ function AuthorForm({ obj }) {
         />
       </FloatingLabel>
 
-      {/* DESCRIPTION TEXTAREA  */}
-      <FloatingLabel controlId="floatingTextarea" label="Description" className="mb-3">
-        <Form.Control
-          as="textarea"
-          placeholder="Description"
-          style={{ height: '100px' }}
-          name="description"
-          value={formInput.description}
-          onChange={handleChange}
-          required
-        />
-      </FloatingLabel>
-
       {/* A WAY TO HANDLE UPDATES FOR TOGGLES, RADIOS, ETC  */}
       <Form.Check
         className="text-white mb-3"
@@ -109,7 +93,7 @@ function AuthorForm({ obj }) {
         onChange={(e) => {
           setFormInput((prevState) => ({
             ...prevState,
-            sale: e.target.checked,
+            favorite: e.target.checked,
           }));
         }}
       />
