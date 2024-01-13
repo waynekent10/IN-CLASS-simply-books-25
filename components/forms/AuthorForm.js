@@ -9,7 +9,7 @@ const initialState = {
   first_name: '',
   last_name: '',
   email: '',
-  favorite: true,
+  favorite: false,
 };
 
 function AuthorForm({ obj }) {
@@ -37,7 +37,7 @@ function AuthorForm({ obj }) {
       createAuthor(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateAuthor(patchPayload).then(() => {
-          router.push('/');
+          router.push('/author');
         });
       });
     }
@@ -63,7 +63,7 @@ function AuthorForm({ obj }) {
         <Form.Control
           type="text"
           placeholder="Enter Last Name"
-          name="image"
+          name="last_name"
           value={formInput.last_name}
           onChange={handleChange}
           required
