@@ -23,6 +23,8 @@ function Home() {
     getAllTheBooks();
   }, []);
 
+  // TODOO: STRETCH - For Search...
+
   return (
     <div className="text-center my-4">
       <Link href="/book/new" passHref>
