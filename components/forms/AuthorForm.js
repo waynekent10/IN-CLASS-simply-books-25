@@ -8,6 +8,7 @@ import { useAuth } from '../../utils/context/authContext';
 const initialState = {
   first_name: '',
   last_name: '',
+  image: '',
   email: '',
   favorite: false,
   uid: '',
@@ -83,6 +84,18 @@ function AuthorForm({ obj }) {
         />
       </FloatingLabel>
 
+      {/* IMAGE INPUT  */}
+      <FloatingLabel controlId="floatingInput2" label="Book Image" className="mb-3">
+        <Form.Control
+          type="url"
+          placeholder="Enter an image url"
+          name="image"
+          value={formInput.image}
+          onChange={handleChange}
+          required
+        />
+      </FloatingLabel>
+
       {/* A WAY TO HANDLE UPDATES FOR TOGGLES, RADIOS, ETC  */}
       <Form.Check
         className="text-white mb-3"
@@ -109,6 +122,7 @@ AuthorForm.propTypes = {
   obj: PropTypes.shape({
     first_name: PropTypes.string,
     last_name: PropTypes.string,
+    image: PropTypes.string,
     email: PropTypes.string,
     favorite: PropTypes.bool,
     firebaseKey: PropTypes.string,
