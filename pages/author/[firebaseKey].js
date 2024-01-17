@@ -22,7 +22,7 @@ export default function ViewAuthor() {
         <div className="d-flex flex-column" />
         <div className="text-white ms-5 details">
           <h5>
-            {authorDetails.first_name} by {authorDetails.last_name}
+            {authorDetails.first_name} {authorDetails.last_name}
             {authorDetails.favorite ? '🤍' : ''}
           </h5>
           Author Email: <a href={`mailto:${authorDetails.email}`}>{authorDetails.email}</a>
@@ -30,8 +30,8 @@ export default function ViewAuthor() {
       </div>
       <hr />
       <div className="d-flex flex-wrap">
-        {authorDetails.books?.map((book) => (
-          <AuthorCard key={book.firebaseKey} bookObj={book} onUpdate={viewAuthorBooks} />
+        {authorDetails.books?.map((author) => (
+          <AuthorCard key={author.firebaseKey} authorObj={author} onUpdate={viewAuthorBooks} />
         ))}
       </div>
     </>
