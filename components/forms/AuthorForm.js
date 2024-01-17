@@ -10,6 +10,7 @@ const initialState = {
   last_name: '',
   email: '',
   favorite: false,
+  uid: '',
 };
 
 function AuthorForm({ obj }) {
