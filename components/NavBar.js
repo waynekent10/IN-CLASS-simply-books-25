@@ -30,7 +30,7 @@ export default function NavBar({ user }) {
             <Link passHref href="/authors">
               <Nav.Link>Authors</Nav.Link>
             </Link>
-            <Link passHref href="/authors/favorites">
+            <Link passHref href="/author/favorites">
               <Nav.Link>Favorite Authors</Nav.Link>
             </Link>
             <Link passHref href="/author/new">
