@@ -18,7 +18,7 @@ export default function BooksOnSale() {
   return (
     <div>
       {books.map((book) => (
-        <BookCard key={book.firebaseKey} bookObj={books} onUpdate={getBooksOnSale} />
+        <BookCard key={book.firebaseKey} bookObj={book} onUpdate={getBooksOnSale} />
       ))}
     </div>
   );
