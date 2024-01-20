@@ -40,7 +40,7 @@ export default function NavBar({ user }) {
             <Link passHref href="/profile">
               <Nav.Link><img className="profile-img" src={user.photoURL} alt={user.displayName} /></Nav.Link>
             </Link>
-            <Button type="button" size="lg" className="copy-btn" onClick={signOut}>
+            <Button type="button" size="lg" className="btn btn-danger" onClick={signOut}>
               Sign Out
             </Button>
           </Nav>
