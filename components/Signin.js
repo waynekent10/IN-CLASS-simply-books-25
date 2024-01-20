@@ -15,7 +15,7 @@ function Signin() {
     >
       <h1>Hi there!</h1>
       <p>Click the button below to look at these books!!!</p>
-      <Button type="button" size="lg" className="btn btn-danger" onClick={signIn}>
+      <Button type="button" size="lg" className="btn btn-warning" onClick={signIn}>
         Sign In
       </Button>
     </div>
