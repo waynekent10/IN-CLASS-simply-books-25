@@ -21,7 +21,7 @@ function AuthorForm({ obj }) {
 
   useEffect(() => {
     if (obj.firebaseKey) setFormInput(obj);
-  }, [obj]);
+  }, [obj, user]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
